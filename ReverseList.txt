@@ -1,0 +1,67 @@
+reverse a linked List:
+1. Iterative Solution:
+	Take 3 pointers: p, q, r
+
+listnode* reverseList(listnode* A) {
+    if(A->next==NULL)
+        return A;
+    listnode* q = A;
+    listnode* p = q->next;
+    listnode* r = p->next;
+    while(r!=NULL){
+        p->next=q; //reverse the link of node p
+		//iterate forward
+        q=p;
+        p=r;
+        r=r->next;
+    }
+	//the last reversal
+    p->next=q;
+    q=p;// Why did I do this? 
+    //p=r;
+    A=p;
+	A->next = NULL;
+    return A;
+}
+
+There is a recursive approach as well:
+/**
+ * @input A : Head pointer of linked list 
+ * 
+ * @Output head pointer of list.
+ */
+listnode* reverseList(listnode* A) {
+    if(A==NULL)
+        return NULL;
+    listnode *p;
+    listnode *q;
+    if(A->next == NULL){
+        return A;
+    }
+    p = reverseList(A->next);
+	//reverse at the last
+    q = A->next;
+    q->next=A;
+    A->next = NULL;
+    return p;
+}
+
+
+Note::
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ * 
+ * typedef struct ListNode listnode;
+ * 
+ * listnode* listnode_new(int val) {
+ *     listnode* node = (listnode *) malloc(sizeof(listnode));
+ *     node->val = val;
+ *     node->next = NULL;
+ *     return node;
+ * }
+ */

@@ -46,6 +46,28 @@ listnode* reverseList(listnode* A) {
     return p;
 }
 
+Reverse a list from m to n:
+listnode* reverseBetween(listnode* head, int m, int n) {
+     listnode* newHead = listnode_new(-1);
+    newHead->next = head;
+    listnode* prev = newHead;
+    int i;
+    for(i = 0 ; i < m-1 ; i++){
+        prev = prev->next;
+    }
+    listnode* reversedPrev = prev;
+        //position m
+        prev = prev->next;
+        listnode* cur = prev->next;
+        for(i = m ; i < n ; i++){
+            prev->next = cur->next;
+            cur->next = reversedPrev->next;
+            reversedPrev->next = cur;
+            cur = prev->next;
+        }
+    return newHead->next;
+}
+
 
 Note::
 

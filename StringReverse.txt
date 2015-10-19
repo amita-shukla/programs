@@ -1,0 +1,74 @@
+public void reverse(char [] array, int start, int end) {
+	    char temp;
+	    int i;
+	    
+	    for (i = 0; i < (end - start + 1) / 2; i++) {
+	        temp = array[start + i];
+	        array[start + i] = array[end - i];
+	        array[end - i] = temp;
+	    }
+	    
+	}
+	
+The StringBuilder has a reverse function
+
+Given an input string, reverse the string word by word.
+
+Example: Let the input string be “i like this program very much”. 
+The function should change the string to “much very program this like i”
+
+Algorithm:
+
+1) Reverse the individual words, we get the below string.
+     "i ekil siht margorp yrev hcum"
+2) Reverse the whole string from start to end and you get the desired output.
+     "much very program this like i"
+	 
+My solution:
+public String reverseWords(String a) {
+    	    
+    	    //remove all the extra spaces 
+    	    a= a.trim().replaceAll("\\s+", " ");
+    	
+    	    String[] rev = a.split(" ");
+    	    StringBuilder res = new StringBuilder();
+    	    
+    	    for(int i=(rev.length)-1;i>=0;i--){
+    	        res.append(rev[i]+' ');
+    	    }
+    	    res.deleteCharAt(res.length()-1);
+    	    return res.toString();
+    	   
+    	    
+    	}
+		
+		
+C Program:
+void reverse(char* s){
+    int length=0,i=0;
+    //BEWARE: the null char is \0 and not /0 !!
+    while(s[i]!='\0'){
+        length++;
+        i++;
+    }
+    printf("%d\n",length);
+    //if substring of a string is given
+    /*
+    int l=0,r=length-1;
+    for(i=0;i<=(r-l)/2;i++){
+        char temp = s[l+i];
+        s[l+i] = s[r-i];
+        s[r-i] = temp;
+    }
+    printf("%s\n",s);
+    */
+    for(i=0;i<=(length-1)/2;i++){
+        char temp = s[i];
+        s[i] = s[length-1-i];
+        s[length-1-i] = temp;
+    }
+
+    printf("%s\n",s);
+
+}
+

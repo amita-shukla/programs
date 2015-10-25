@@ -1,3 +1,4 @@
+/*
 Given an array of strings, return all groups of strings that are anagrams. 
 Represent a group by a list of integers representing the index in the original list. Look at the sample case for clarification.
 
@@ -31,7 +32,7 @@ Note:
 	   with the desire to limit coupling and keep your public interface as small as possible.
 
 
-My Solution: 
+My Solution: */
 public ArrayList<ArrayList<Integer>> anagrams(final List<String> a) {
 	    Map<String, ArrayList<Integer>> lhm = new LinkedHashMap<>();
 		for(int i=1;i<=a.size();i++){
@@ -65,8 +66,8 @@ public ArrayList<ArrayList<Integer>> anagrams(final List<String> a) {
 		return String.valueOf(c);
 	}
 	
-The Solution:
-public class Solution {
+/*The Solution:*/
+class Solution {
 	public ArrayList<ArrayList<Integer>> anagrams(final List<String> A) {
 	    ArrayList<ArrayList<Integer>> res = new ArrayList<>();
 	    HashMap<String, ArrayList<Integer>> hashMap = new HashMap<>();

@@ -1,4 +1,4 @@
-==========================================================================================================
+/*==========================================================================================================
 For Given Number N find if its COLORFUL number or not
 
 Return 0/1
@@ -20,6 +20,8 @@ this number is a COLORFUL number since product of every digit of a sub-sequence 
 Output : 1
 
 ==========================================================================================================
+*/
+class Solution {
 public int colorful(int num) {
 	    String numS = String.valueOf(num);
 	    HashSet<Integer> products = new HashSet<>();
@@ -45,8 +47,8 @@ public int colorful(int num) {
 	    }
 	    return prod;
 	}
-	
-==========================================================================================================
+}	
+/*==========================================================================================================
 NOte: 
 1. substring method takes 1st parameter inclusive and second as exclusive.
- 
+ */

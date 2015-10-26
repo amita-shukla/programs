@@ -26,7 +26,7 @@ therefore the modified algorithm is:
 			if(i != sqrt(n))
 				A.add(n/i);
 
-				
+			
 To give sorted result:
 */
 public class Solution {

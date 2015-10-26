@@ -24,7 +24,7 @@ listnode* reverseList(listnode* A) {
     return A;
 }
 
-//There is a recursive approach as well:
+//There is a recursive approach as well
 /**
  * @input A : Head pointer of linked list 
  * 

@@ -1,3 +1,4 @@
+/*
 Check if a Number is a perfect power.
 i.e. for given an integer X, return true if it can be written in the form X=A^B, where A and B are integers.
 
@@ -17,8 +18,8 @@ For every possible value of B, check for every possible value of A.
 
 Note:- A sieve[Intger.MAX_VALUE] or sieve[X+1] gives out of memory error if
 		X=10240000
-		
-My solution:
+*/		
+class MySolution{
 public boolean isPower(int X) {
         if(X==0)
             return false;
@@ -40,3 +41,4 @@ public boolean isPower(int X) {
         }
         return false;
     }
+ }

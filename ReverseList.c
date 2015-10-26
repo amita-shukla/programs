@@ -1,7 +1,7 @@
-reverse a linked List:
+/*reverse a linked List:
 1. Iterative Solution:
 	Take 3 pointers: p, q, r
-
+*/
 listnode* reverseList(listnode* A) {
     if(A->next==NULL)
         return A;
@@ -24,7 +24,7 @@ listnode* reverseList(listnode* A) {
     return A;
 }
 
-There is a recursive approach as well:
+//There is a recursive approach as well:
 /**
  * @input A : Head pointer of linked list 
  * 
@@ -46,7 +46,7 @@ listnode* reverseList(listnode* A) {
     return p;
 }
 
-Reverse a list from m to n:
+//Reverse a list from m to n:
 listnode* reverseBetween(listnode* head, int m, int n) {
      listnode* newHead = listnode_new(-1);
     newHead->next = head;
@@ -69,7 +69,7 @@ listnode* reverseBetween(listnode* head, int m, int n) {
 }
 
 
-Note::
+//Note::
 
 /**
  * Definition for singly-linked list.

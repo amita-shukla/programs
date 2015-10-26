@@ -1,4 +1,4 @@
-/*Suppose you need to remove duplicate elements from an array INPLACE.
+/*Suppose you need to remove duplicate elements from an array INPLACE:
 	take 2 pointers:
 		1st to iterate over the array
 		2nd to be incremented only when unique elements are obtained.

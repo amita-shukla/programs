@@ -1,6 +1,6 @@
 /*
 Check if a Number is a perfect power.
-i.e. for given an integer X, return true if it can be written in the form X=A^B, where A and B are integers.
+i.e., for given an integer X, return true if it can be written in the form X=A^B, where A and B are integers.
 
 -----------------x
 Q.

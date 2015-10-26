@@ -21,7 +21,7 @@ Return : [-1, -1, -1]
 
 
 The naive solution to this problem would be O(n^2)
-Observe that at A[i-1]. 
+Observe that at A[i-1]
 All elements with index smaller than i - 1 and greater than A[i-1] are useless to us because they would never qualify for 
 G[i], G[i+1], ...
 

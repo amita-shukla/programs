@@ -1,4 +1,4 @@
-=================================================================================================================
+/*=================================================================================================================
 REPEATSTR
 Given a string, 
 find the length of the longest substring without repeating characters.
@@ -10,6 +10,7 @@ The longest substring without repeating letters for "abcabcbb" is "abc", which t
 For "bbbbb" the longest substring is "b", with the length of 1.
 
 =================================================================================================================
+*/
 public class Solution {
 	public int lengthOfLongestSubstring(String a) {
 	   HashMap<Character,Integer> hm = new HashMap<>();
@@ -30,4 +31,4 @@ public class Solution {
 	   return maxLen;
     }
 }
-=================================================================================================================
+

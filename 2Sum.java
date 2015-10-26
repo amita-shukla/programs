@@ -1,5 +1,5 @@
 /*
-==========================================================================================================================
+=========================================================================================================================
 Given an array of integers, find two numbers such that they add up to a specific target number.
 
 The function twoSum should return indices of the two numbers such that they add up to the target, where index1 < index2.
@@ -12,7 +12,7 @@ If there are multiple solutions with the minimum index2, choose the one with min
 
 Input: [2, 7, 11, 15], target=9
 Output: index1 = 1, index2 = 2
-==========================================================================================================================
+=========================================================================================================================
 */
 public class Solution {
 	public ArrayList<Integer> twoSum(final List<Integer> a, int target) {

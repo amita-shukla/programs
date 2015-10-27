@@ -1,4 +1,4 @@
-Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+/*Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
 push(x) – Push element x onto stack.
 pop() – Removes the element on top of the stack.
@@ -6,9 +6,9 @@ top() – Get the top element.
 getMin() – Retrieve the minimum element in the stack.
 
 Take another stack minStack, that is supposed to track the minimum element fro every push and pop.
-when pushing, check if the element is less than the min element
-when popping, check if the minimum element is popped out.
-
+When pushing, check if the element is less than the min element
+When popping, check if the minimum element is popped out.
+*/
 class Solution {
     Stack<Integer> s;
     Stack<Integer> minStack;

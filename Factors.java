@@ -1,4 +1,4 @@
-Given a number N, find all factors of N.
+/*Given a number N, find all factors of N.
 
 Example:
 
@@ -26,9 +26,9 @@ therefore the modified algorithm is:
 			if(i != sqrt(n))
 				A.add(n/i);
 
-				
+			
 To give sorted result:
-
+*/
 public class Solution {
 	public ArrayList<Integer> allFactors(int a) {
 	    ArrayList<Integer> list = new ArrayList<Integer>();

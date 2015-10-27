@@ -1,3 +1,4 @@
+/*
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 
 For example:
@@ -12,6 +13,7 @@ For example:
 	
 	
 My solution:
+*/
 public class Solution {
     static HashMap<Integer, Character> hm;
 	public String convertToTitle(int num) {
@@ -32,9 +34,9 @@ public class Solution {
 	   // title.append(hm.get(num));
 	    return title.reverse().toString();
 	}
-}
 
-Or:
+
+//Or:
 
 public String convertToTitle(int n) {
     StringBuilder sb = new StringBuilder();
@@ -50,4 +52,5 @@ public String convertToTitle(int n) {
 
     }
     return sb.reverse().toString();
+}
 }

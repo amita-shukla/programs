@@ -1,3 +1,4 @@
+/*
 Given an array, find the nearest smaller element G[i] for every element A[i] in the array such that the element has an index smaller than i.
 
 More formally,
@@ -20,13 +21,15 @@ Return : [-1, -1, -1]
 
 
 The naive solution to this problem would be O(n^2)
-Observe that at A[i-1]. 
+Observe that at A[i-1]
 All elements with index smaller than i - 1 and greater than A[i-1] are useless to us because they would never qualify for 
 G[i], G[i+1], ...
 
 Hence we can come up with stack as a solution as we need only the element most recently pushed or the number smaller than that.
 Intermediate numbers are not needed.
+*/
 
+class Solution{
  public ArrayList<Integer> prevSmaller(ArrayList<Integer> arr) {
         Stack<Integer> s = new Stack<>();
         ArrayList<Integer> res = new ArrayList<>();
@@ -54,7 +57,8 @@ Intermediate numbers are not needed.
         return res;
     }
 	
-	
+}
+/*
 Similarly, the give question:
 Given an array, find the next greater element G[i] for every element A[i] in the array. The Next greater Element for an element A[i] is the first greater element on the right side of A[i] in array. 
 More formally,
@@ -74,7 +78,8 @@ Example 2:
 
 Input : A : [3, 2, 1]
 Output : [-1, -1, -1]
-
+*/
+class Solution{
 	public ArrayList<Integer> nextGreater(ArrayList<Integer> a) {
 	    Stack<Integer> s = new Stack<Integer>();
 	    ArrayList<Integer> res = new ArrayList<>();
@@ -97,3 +102,4 @@ Output : [-1, -1, -1]
 	    }
 	    return res;
 	}
+}

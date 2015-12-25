@@ -9,7 +9,7 @@ public class Solution {
     
 	public ArrayList<ArrayList<Integer>> subsets(ArrayList<Integer> set) {
 	    
-	    Collections.sort(a);
+	    Collections.sort(set);
 	    sets = new ArrayList<ArrayList<Integer>>();
 	    sets.add(new ArrayList<Integer>());
 	    backtrack(set,0,new ArrayList<Integer>());

@@ -1,6 +1,6 @@
 package linkedlists;
 
-public class Add2Numbers {
+public class AddTwoNumbers {
 
 	/**
 	 * @param args

@@ -99,8 +99,9 @@ public class RodCut {
 		for(int i =0 ;i <=n;i++)
 			System.out.print(" "+ sol[i]);
 		System.out.println();
-		printSol(n,sol);
 		*/
+		printSol(n,sol);
+		
 		return dp[n];
 	}
 	

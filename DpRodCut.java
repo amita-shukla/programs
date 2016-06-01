@@ -8,21 +8,25 @@ import java.util.Arrays;
  * 
  */
 
-public class DpRodCut {
+public class RodCut {
 	static int[] dpTopDown;
 
 	public static void main(String args[]) {
 		int[] p = { -1, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30 };
-		int n = 4;
-		System.out.println(bottomUpRodCut(n, p));
+		int n = 7;
+		System.out.println("max rev = "+ bottomUpRodCut(n, p));
+		System.out.println("max rev = "+extendedBottomUpRodCut(n, p));
+		
 
 		dpTopDown = new int[n + 1];
 		Arrays.fill(dpTopDown, -1);
-		System.out.println(topDownRodCut(n, p));
+		System.out.println("max rev = "+topDownRodCut(n, p));
 
+		/*
 		// print dpTopDown
 		for (int i = 0; i < dpTopDown.length; i++)
 			System.out.println(dpTopDown[i]);
+			*/
 	}
 
 	/**
@@ -67,5 +71,56 @@ public class DpRodCut {
 		}
 		dpTopDown[n] = max;
 		return dpTopDown[n];
+	}
+
+	/**
+	 * Extended bottom up rod cut. Computes a solution matrix, which indicates
+	 * the optimum position to cut the rod.
+	 */
+	
+	public static int extendedBottomUpRodCut(int n, int[] p){
+		int[] dp = new int[n+1];
+		int[] sol = new int[n+1];
+		
+		for(int i = 1; i <= n; i++){
+			int max = p[i];
+			sol[i] = i;
+			for(int j = 1; j <= i/2; j++ ){
+				int newMax = Math.max(max, dp[j]+dp[i-j]);
+				if(newMax > max){
+					sol[i] = j;
+					max = newMax;
+				}
+			}
+			dp[i] = max;
+		}
+		
+		/*
+		for(int i =0 ;i <=n;i++)
+			System.out.print(" "+ sol[i]);
+		System.out.println();
+		printSol(n,sol);
+		*/
+		return dp[n];
+	}
+	
+	/**
+	 * Print solution
+	 */
+	
+	public static void printSol(int i, int[] s){
+		
+		if(i==1){
+			System.out.print(" "+s[i]);
+			return;
+		}
+		
+		if(s[i]==i){
+			System.out.print(" "+s[i]);
+			return;
+		}
+		
+		printSol(i-1,s);
+		System.out.print(" "+s[i]);
 	}
 }

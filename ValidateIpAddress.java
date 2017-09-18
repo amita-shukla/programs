@@ -110,4 +110,38 @@ public class ValidateIpAddress {
         System.out.println(restoreIpAddresses(c));
     }
 
+/**
+ANOTHER SOLUTION
+public ArrayList<String> restoreIpAddresses(String s) {
+        if (s == null || s.length() < 4) return new ArrayList<>();
+        return getParts(s, 3);
+    }
+    
+    private ArrayList<String> getParts(String s, int dots) {
+        ArrayList<String> parts = new ArrayList<>();
+        if (dots == 0) {
+            if (isValidOctet(s)) {
+                parts.add(s);
+            }
+            return parts;
+        }
+        for (int i = 1; i <= Math.min(3, s.length()); i++) {
+            String octet = s.substring(0, i);    
+            if (isValidOctet(octet)) {
+                for (String part : getParts(s.substring(i), dots - 1)) {
+                    parts.add(octet + "." + part);
+                }
+            }
+        }
+        return parts;
+    }
+    
+    boolean isValidOctet(String s) {
+        if (s.length() == 0 || s.length() > 3) return false;
+        if (s.length() > 1 && s.charAt(0) == '0') return false;
+        int octet = Integer.parseInt(s);
+        return octet < 256;
+    }
+    
+**/
 }

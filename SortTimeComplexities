@@ -1,0 +1,16 @@
+Algorithm		Worst-case running time 	Average-case/expected running time
+Insertion sort	theta n^2					theta n^2					
+Merge sort		theta nlg n					theta nlg n
+Heapsort		O nlgn						---
+Quicksort		theta n^2 					theta nlg n (expected)
+Counting sort	theta k+n 					theta k+n
+Radix sort		theta(d(n+k))				theta(d(n+k))
+Bucket sort		theta n^2 					theta(n) (average case)
+
+
+ 
+
+
+
+
+

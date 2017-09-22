@@ -1,3 +1,7 @@
+best=atleast
+worst=atmost
+average=average
+
 Algorithm		Worst-case running time 	Average-case/expected running time
 Insertion sort	theta n^2					theta n^2					
 Merge sort		theta nlg n					theta nlg n

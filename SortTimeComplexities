@@ -11,6 +11,17 @@ Counting sort	theta k+n 					theta k+n
 Radix sort		theta(d(n+k))				theta(d(n+k))
 Bucket sort		theta n^2 					theta(n) (average case)
 
+========================================================================================
+
+In a balanced BST, we can do the following :
+
+1. Insert in O(log n)
+2. Delete in O(log n)
+3. Search for an element in O(log n)
+4. Find Min in O(log n)
+5. Find Max in O(log n)
+6. Get all the elements in sorted order in O(n) - Inorder traversal.
+7. Find an element closest in value to x O(log n)
 
  
 
